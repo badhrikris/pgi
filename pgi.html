@@ -1,0 +1,643 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Guidance | Digital Inertia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background: url('students-group.jpg') center/cover fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67,97,238,0.85) 0%, rgba(63,55,201,0.9) 100%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #fff 20%, #f72585 40%, #f72585 60%, #fff 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .video-card {
+            grid-column: span 2;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 50px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            aspect-ratio: 1;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .team-section {
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            width: 220px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: -70px auto 20px;
+            position: relative;
+            background: white;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            margin: 10px 0 5px;
+            color: var(--secondary);
+        }
+        
+        .member-role {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--dark);
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .video-card {
+                grid-column: span 1;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>College Admission Guidance</h1>
+            <p class="tagline">Your Future Starts With The Right Education Choices</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2><i class="fas fa-graduation-cap"></i> Our Approach</h2>
+                <p>We provide personalized counseling sessions to understand each student's unique aspirations and academic profile.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Career aptitude assessment</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> College shortlisting</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Application strategy</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Exam preparation</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Scholarship guidance</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-chart-line"></i> Success Stories</h2>
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="success-student.jpg" alt="Successful student" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <p>"Digital Inertia helped me get into my dream college with scholarship support!"</p>
+                    <p>- Priya K., MIT Student</p>
+                </div>
+            </div>
+            
+            <div class="card video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; color: white; font-size: 2.5rem;">Our Student Community</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="student1.jpg" alt="Student studying">
+            </div>
+            <div class="gallery-item">
+                <img src="student2.jpg" alt="Campus life">
+            </div>
+            <div class="gallery-item">
+                <img src="student3.jpg" alt="Graduation day">
+            </div>
+            <div class="gallery-item">
+                <img src="student4.jpg" alt="Group project">
+            </div>
+        </div>
+        
+        <div class="team-section">
+            <h2 style="color: white; font-size: 2.5rem;">Meet Our Team</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">Our experienced counselors have helped thousands of students find their perfect educational path.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="boss.jpg" alt="Boss" class="member-photo">
+                    <h3 class="member-name">Boss</h3>
+                    <p class="member-role">Founder & Lead Counselor</p>
+                    <p>15+ years experience in education consulting</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="counselor1.jpg" alt="Counselor" class="member-photo">
+                    <h3 class="member-name">Sarah</h3>
+                    <p class="member-role">College Admissions Expert</p>
+                    <p>Specializes in STEM programs</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="counselor2.jpg" alt="Counselor" class="member-photo">
+                    <h3 class="member-name">Rahul</h3>
+                    <p class="member-role">Career Advisor</p>
+                    <p>Focus on emerging career fields</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>  -->
+<!-- <html>
+    <head>
+        <style>
+            .h1{
+              width: 300px;
+              padding: 20px;
+              margin: 50px auto;
+              border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+            }
+            .button{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: larger;
+                display: inline-block;
+                text-align: center;
+            }
+
+        </style>
+        <body>
+            <div class="h1">
+                <ul>
+                    <li>email</li>
+                    <li>password</li>
+
+                </ul>
+            </div>
+            <div class="button">
+
+            
+            <button>
+                amazon
+            </button>
+        </div>
+        </body>
+
+    </head>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train the Trainers - Plant Green Inertia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080?text=Dynamic+Trainer+Workshop');
+            background-size: cover;
+            background-position: center;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .icon-circle {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .section-bg {
+            background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky top-0 z-10">
+        <div class="container mx-auto flex items-center justify-center py-4">
+            <img src="https://via.placeholder.com/300x100?text=Plant+Green+Inertia+Logo" alt="Plant Green Inertia Logo" class="h-16">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+        <div class="fade-in">
+            <h1 class="text-5xl font-bold mb-4">Train the Trainers Program</h1>
+            <p class="text-xl mb-6">Empower Lives with Plant Green Inertia</p>
+            <a href="#about" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 flex items-center justify-center mx-auto w-48">
+                <i class="fa-solid fa-arrow-down mr-2 pulse"></i> Discover More
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="icon-circle pulse mx-auto">
+                    <i class="fa-solid fa-chalkboard-user text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800">What is the TTT Program?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="fade-in">
+                    <p class="text-lg text-gray-600 mb-4">Plant Green Inertia, the world’s first experiential training company, introduces the Train the Trainers (TTT) program—a certification that equips you to become a certified trainer. Learn to develop skills experientially in areas like <span class="font-semibold text-green-600">soft skills</span>, <span class="font-semibold text-green-600">digital marketing</span>, and more, using our revolutionary methodologies.</p>
+                    <p class="text-lg text-gray-600">“Anyone can become a trainer, but not anyone can be a trainer.” – LLB, Founder of PGI</p>
+                </div>
+                <div class="fade-in">
+                    <img src="https://via.placeholder.com/600x400?text=Interactive+Training+Session" alt="Training Session" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Qualities Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="icon-circle pulse mx-auto">
+                    <i class="fa-solid fa-users text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800">Who Can Join?</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-plane-departure text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Willing to Travel</h3>
+                    <p class="text-gray-600">Ready to travel to colleges for training.</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-comments text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Interactive</h3>
+                    <p class="text-gray-600">Eager to engage with students.</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-heart text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Empathy</h3>
+                    <p class="text-gray-600">A compassionate approach.</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-book-open text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Willing to Learn</h3>
+                    <p class="text-gray-600">Open to growth and learning.</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-microphone text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Communication Skills</h3>
+                    <p class="text-gray-600">Effective communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details Section -->
+    <section id="details" class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="icon-circle pulse mx-auto">
+                    <i class="fa-solid fa-calendar-check text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800">Program Details</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <img src="https://via.placeholder.com/400x300?text=Soft+Skills+Training" alt="Soft Skills Training" class="rounded-lg shadow-lg w-full mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 flex items-center justify-center">
+                        <i class="fa-solid fa-users-gear text-green-600 mr-2"></i> Soft Skills
+                    </h3>
+                    <p class="text-gray-600">Master communication, leadership, and teamwork.</p>
+                </div>
+                <div class="fade-in">
+                    <img src="https://via.placeholder.com/400x300?text=Digital+Marketing+Training" alt="Digital Marketing Training" class="rounded-lg shadow-lg w-full mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 flex items-center justify-center">
+                        <i class="fa-solid fa-laptop-code text-green-600 mr-2"></i> Digital Marketing
+                    </h3>
+                    <p class="text-gray-600">Learn SEO, social media, and online strategies.</p>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-clipboard-list text-green-600 mr-2"></i> Schedule & Format
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-4">Our experiential methodology includes games, activities, and storytelling. Start with training videos, followed by live sessions with master trainers. Held monthly on weekends, with an online option. Limited to 20 trainees per batch after a qualifier test.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="icon-circle pulse mx-auto">
+                    <i class="fa-solid fa-certificate text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800">Certification Options</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-clock text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">One Day</h3>
+                    <p class="text-lg text-gray-600 mb-2">3 Hours</p>
+                    <p class="text-2xl font-bold text-gray-800">₹4999/-</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-calendar-alt text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">1 Month</h3>
+                    <p class="text-lg text-gray-600 mb-2">Comprehensive Course</p>
+                    <p class="text-2xl font-bold text-gray-800">₹9999/-</p>
+                </div>
+                <div class="fade-in bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                    <div class="icon-circle"><i class="fa-solid fa-graduation-cap text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">6 Months</h3>
+                    <p class="text-lg text-gray-600 mb-2">In-Depth Training</p>
+                    <p class="text-2xl font-bold text-gray-800">₹34999/-</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 section-bg">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-center mb-12">
+                <div class="icon-circle pulse mx-auto">
+                    <i class="fa-solid fa-envelope text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-800">Get in Touch</h2>
+            </div>
+            <p class="text-lg text-gray-600 mb-6">Ready to make an impact as a trainer? Contact us today!</p>
+            <div class="fade-in">
+                <p class="text-lg text-gray-600 mb-4">Email: contact@plantgreeninertia.com</p>
+                <p class="text-lg text-gray-600 mb-4">Phone: +91-123-456-7890</p>
+                <a href="mailto:contact@plantgreeninertia.com" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 flex items-center justify-center mx-auto w-48">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Plant Green Inertia Pvt Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
