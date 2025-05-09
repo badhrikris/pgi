@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Train the Trainer - PGI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/featured/?training') no-repeat center/cover;
+    }
+    .animate-pulse:hover {
+      animation: pulse 1.5s infinite;
+    }
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-green-900 text-white sticky top-0 z-10 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <img src="PGI .jpeg.jpg" alt="PGI Logo" class="w-40 transition-transform hover:scale-105">
+      <h1 class="text-3xl font-extrabold tracking-tight">Train The Trainer</h1>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg py-20 px-6 text-center text-white">
+    <h2 class="text-5xl font-extrabold mb-6 animate-pulse">Become a Certified Trainer</h2>
+    <p class="text-xl max-w-3xl mx-auto mb-8">Join India’s pioneering experiential training company. Master Soft Skills, Digital Marketing, and transform lives.</p>
+    <a href="#register" class="inline-block bg-green-800 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition transform hover:scale-105">Register Now</a>
+    <div class="mt-8">
+      <img src="https://source.unsplash.com/featured/?motivation" alt="Training Inspiration" class="mx-auto rounded-lg shadow-lg w-3/4 md:w-1/2">
+    </div>
+  </section>
+
+  <!-- Program Overview -->
+  <section id="overview" class="max-w-7xl mx-auto px-4 py-16">
+    <h3 class="text-4xl font-bold mb-8 text-center text-green-900">What We Train</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="https://source.unsplash.com/featured/?teamwork" alt="Team Training" class="w-full h-48 object-cover rounded-t-xl mb-4">
+        <h4 class="text-2xl font-semibold mb-3 text-green-700">Train the Trainer</h4>
+        <p>Master experiential learning with games, storytelling, and interactive activities.</p>
+      </div>
+      <div class="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="https://source.unsplash.com/featured/?communication" alt="Soft Skills" class="w-full h-48 object-cover rounded-t-xl mb-4">
+        <h4 class="text-2xl font-semibold mb-3 text-green-700">Soft Skills</h4>
+        <p>Develop communication, teamwork, empathy, and emotional intelligence.</p>
+      </div>
+      <div class="p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="https://source.unsplash.com/featured/?digital-marketing" alt="Digital Marketing" class="w-full h-48 object-cover rounded-t-xl mb-4">
+        <h4 class="text-2xl font-semibold mb-3 text-green-700">Digital Marketing</h4>
+        <p>Learn social media, SEO, content creation, and brand-building strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Trainer -->
+  <section class="bg-gray-100 py-16 px-6 parallax" style="background-image: url('https://source.unsplash.com/featured/?education');">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+      <div class="md:w-1/2">
+        <img src="https://source.unsplash.com/featured/?teacher,professional" alt="Trainer Image" class="rounded-2xl shadow-2xl transform hover:scale-105 transition">
+      </div>
+      <div class="md:w-1/2 text-white bg-green-900 bg-opacity-90 p-8 rounded-2xl">
+        <h3 class="text-3xl font-bold mb-4">Who is a Trainer?</h3>
+        <p class="mb-6 text-lg">A trainer at PGI is a catalyst for change, using experiential methods to inspire and educate.</p>
+        <blockquote class="italic text-green- spots300 border-l-4 border-green-500 pl-4">"Anyone can teach, but only a few can truly transform." – LLB, Founder of PGI</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses and Pricing -->
+  <section id="courses" class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-4xl font-bold mb-10 text-center text-green-900">Courses & Pricing</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="border-2 border-green-200 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/featured/?bootcamp" alt="Bootcamp" class="w-full h-40 object-cover rounded-t-xl mb-4">
+          <h4 class="text-2xl font-semibold mb-3">1-Day Bootcamp</h4>
+          <p class="text-gray-600 mb-3">Duration: 3 Hours</p>
+          <p class="text-green-800 font-bold text-2xl">₹4,999</p>
+        </div>
+        <div class="border-2 border-green-200 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/featured/?certificate" alt="Certificate" class="w-full h-40 object-cover rounded-t-xl mb-4">
+          <h4 class="text-2xl font-semibold mb-3">1-Month Certificate</h4>
+          <p class="text-gray-600 mb-3">Weekend / Online</p>
+          <p class="text-green-800 font-bold text-2xl">₹9,999</p>
+        </div>
+        <div class="border-2 border-green-200 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/featured/?expert" alt="Expert Program" class="w-full h-40 object-cover rounded-t-xl mb-4">
+          <h4 class="text-2xl font-semibold mb-3">6-Month Expert Program</h4>
+          <p class="text-gray-600 mb-3">In-depth training + Soft Skills & Digital</p>
+          <p class="text-green-800 font-bold text-2xl">₹34,999</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embedded Video -->
+  <section class="text-center py-16 bg-green-50">
+    <h3 class="text-3xl font-bold mb-8 text-green-900">Sneak Peek Into Training</h3>
+    <div class="max-w-5xl mx-auto">
+      <iframe class="w-full aspect-video rounded-2xl shadow-2xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Training Overview" frameborder="0" allowfullscreen></iframe>
+      <p class="mt-4 text-lg text-gray-600">Experience our dynamic training sessions in action!</p>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="bg-green-200 py-16 text-center">
+    <h3 class="text-3xl font-bold mb-4 text-green-900">Limited Seats – Apply Now</h3>
+    <p class="mb-6 text-lg max-w-2xl mx-auto">Only 20 participants per batch! Choose between online and offline modes.</p>
+    <a href="#" class="bg-green-900 text-white px-10 py-4 rounded-full text-lg hover:bg-green-800 transition transform hover:scale-105">Join Now</a>
+    <div class="mt-8">
+      <img src="https://source.unsplash.com/featured/?success" alt="Success" class="mx-auto rounded-lg shadow-lg w-3/4 md:w-1/2">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-8 text-center">
+    <p class="text-lg">© 2025 Plant Green Inertia Pvt. Ltd. | Powered by Experience | <a href="#" class="underline hover:text-green-300">Contact Us</a></p>
+    <div class="mt-4 flex justify-center space-x-6">
+      <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-2xl hover:text-green-300"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
